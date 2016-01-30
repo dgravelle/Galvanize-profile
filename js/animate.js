@@ -6,32 +6,27 @@
 
         function animate(elem) {
             console.log('animating!');
-            console.log(elem);
+            // console.log(elem);
             // get original position of elem
             // var elemRect = elem.getBoundingClientRect();
 
             var posTop = elem.style.top;
-
-
             // animate elem
             function frame() {
-    //             window.cancelAnimationFrame(frame);
 
-
-                var posTopNum = parseInt(posTop);   
-                console.log(posTopNum);
+                var posTopNum = parseInt(posTop);
+                // console.log(posTopNum);
 
                     if( parseInt(elem.style.top) < 0 ) {
-                       
-                       elem.style.top = (parseInt(elem.style.top) + 18) + 'px';
-                       console.log('updated: ', posTop);
-                       console.log('e.style.top: ', elem.style.top);
+
+                       elem.style.top = (parseInt(elem.style.top) + 8) + 'px';
+                      //  console.log('updated: ', posTop);
+                      //  console.log('e.style.top: ', elem.style.top);
                        requestId = window.requestAnimationFrame(frame);
                         // console.log(posTop);
                     } else {
-                       window.cancelAnimationFrame(frame);     
+                       window.cancelAnimationFrame(frame);
                     }
-
                 }
 
             window.requestAnimationFrame(frame);

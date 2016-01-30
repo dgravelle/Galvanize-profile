@@ -8,33 +8,37 @@
 </head>
 <body>
     <div class="site-wrapper">
-        <main id="" class="block block--main">
-            <div>
-                <h1 id="mainHeader" style="top:-300px">WELCOME</h1>
-                
-                <p>My name is Dave Gravelle. <br>I've recently moved all the way from New Jersey.</p>
-            </div>
-        </main>
-        <section class="block block--interests">
-            <h2>Some things I enjoy are:</h2>
+        <section class="block block--main beige">
+
+                <h1>WELCOME</h1>
+                <div class="block__copy">
+                  <p class="lead">My name is Dave Gravelle. </p>
+                  <p>I've just moved all the way from New Jersey to enroll in Galvanize's Full Stack Development course.  My background is in music and UX/UI design and I'm very excited to begin my journey into web development. <a href="goingto.html" class="arrow arrow--right whereTo">What I'm excited to learn</a></p>
+
+                </div>
+                <a href="#more-about" class="arrow arrow--down more-about">More about me</a>
+
+        </section>
+        <section id="more-about" class="block block--more-about">
+            <h2>Things I enjoy</h2>
             <div class="col-4">
-                <img src="" alt="">
+                <img src="icons/mountains.png" alt="" class="icon">
                 <h3>Outdoors</h3>
             </div>
             <div class="col-4">
-                <img src="" alt="">
+                <img src="icons/music.png" alt="" class="icon">
                 <h3>Music</h3>
             </div>
             <div class="col-4">
-                <img src="" alt="">
+                <img src="icons/smiley.png" alt="" class="icon">
                 <h3>Bad Humor</h3>
             </div>
-            <a href="goingto.html" class="btn btn-primary whereTo">Where am I going...?</a>
+
         </section>
     </div>
-    
+
     <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/animate.js"></script>
+    <!-- <script src="js/animate.js"></script> -->
     <script src="js/main.js"></script>
 
 </body>

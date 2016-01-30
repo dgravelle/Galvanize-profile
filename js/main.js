@@ -1,31 +1,28 @@
-$(document).ready(function(){    
+$(document).ready(function(){
+    // button to trigger page slide
+    var moreAbout = $('.more-about');
 
-    var whereToBtn = $('.whereTo');
+    // slide page to elements href location
+    moreAbout.on('click', function(e) {
+      e.preventDefault();
 
-    // add class to trigger CSS3 transition
-    whereToBtn.on('click',function(e) {
-        console.log(e);
-        e.preventDefault();
-        var goingTo = this.getAttribute('href');
+	     var $this = $(this)
+       , scrollToSctn = $this.attr('href');
 
-        $('.site-wrapper').addClass('transition');
-         $(this).one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
-              function(event) {
-    console.log(event);
-  });
+        $('html, body').animate({
+            scrollTop: $(scrollToSctn).offset().top
+        }, 1000);
 
-        // $('.site-wrapper').animate(
-        //     {left:'-3000px'}
-        //     , 600
-        //     , function() {
-        //         // console.log($(this));
-        //         window.location = goingTo;
-        //     });
+    // close mobile nav menu if on a screen smaller than 768px
+    var width = $(window).width();
+    // console.log( width );
+    if( width < 768 ) {
+    	$(navMenu).slideToggle();
+    	$(navIcon).toggleClass('fa-close');
+    	$(navIcon).toggleClass('fa-bars');
+    }
+	});
 
-        // setTimeout(function(){
-        //     window.location = goingTo;
-        //     },300);
 
-        });
 
 });
